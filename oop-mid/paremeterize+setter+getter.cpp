@@ -7,11 +7,12 @@ private:
     string name;
     int age;
 public:
-    person(string n,int a){name=n;age=a;}//perameterize
+    person(string n,int a){name=n;age=a;}     //perameterize
 
-/*string getName(){return name;}
+/*string getName(){return name;}       //getter part
 int getAge(){return age;}*/
-void show()
+
+void show()           // show part
 {
     cout<<"Name="<<name<<"Age="<<age<<endl;
 }
@@ -19,8 +20,10 @@ void show()
 
 int main()
 {
-    person p1("shah rokam", 34);
+    person p1("shah rokam", 34);       //show part
     p1.show();
-   /* person p1("shah rokan",23);
+
+    
+   /* person p1("shah rokan",23);      //getter part
     cout<<"Name="<<p1.getName()<<"Age="<<p1.getAge()<<endl;*/
 }
