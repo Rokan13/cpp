@@ -58,7 +58,7 @@ int main()
     
 
     person m1;
-    cout<<"Default value:"<<endl;
+    cout<<"Default value:"<<endl; //second part
     cout<<"Name: "<<m1.getName() <<endl<<"Age: "<<m1.getAge()<<"\n"; // u can only use second part to print both value
 
     m1.setName("ja issa ti set koro");
