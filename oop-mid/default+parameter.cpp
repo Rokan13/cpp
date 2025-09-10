@@ -1,42 +1,70 @@
+
 #include<iostream>
 using namespace std;
 
-class human{
+class person{
+
 private:
     string name;
     int age;
 public:
-    human(){
-        name="none"; // use default constructor to set default value
-        age=00;}
+    person()
+    {
+        name="janina";
+        age=420; //default value
+    }
 
-    human(string n,int a) //paremeterize constructor
+    person(string n,int a){name=n;age=a;}//perameterize
+
+     void setName(string n)
     {
         name=n;
+    }
+    void setAge(int a)
+    {
         age=a;
     }
 
-    void setname(string n){name=n;}  // when there was a default value, then you can use set function to set new value
-    void setage(int a){age=a;}
-
-    string getname(){return name;} // for showing value
-    int getage(){return age;}
-
-    void show()
+    string getName()
     {
-
-    cout<<"Name="<<name<<"Age="<<age<<endl;
+        return name;
     }
+    int getAge()
+    {
+        return age;
+    }
+
+
+
+
+void show()
+{
+    cout<<"Name="<<name<<endl<<"Age="<<age<<endl; //first part
+                                                   // if you need  no returning value then u can use void
+}                                                  // and also need to use p1.show with first part
 };
 
 int main()
 {
+    /*person p1;
+    cout<<"Default value: "<<endl;  //first part
+    p1.show();
+
+    p1.setName("ja issa ti set koro");
+    p1.setAge(100);
+    cout<<"After set value: "<<endl;
+    p1.show();*/
+    
+    
+
+    person m1;
+    cout<<"Default value:"<<endl;
+    cout<<"Name: "<<m1.getName() <<endl<<"Age: "<<m1.getAge()<<"\n"; // u can only use second part to print both value
+
+    m1.setName("ja issa ti set koro");
+    m1.setAge(100);
+    cout<<"After set value: "<<"\n";
+    cout<<"Name: "<<m1.getName() <<endl<<"Age: "<<m1.getAge() <<endl;
 
 
-    human p;
-    p.show();
-    p.setname("rokan");
-    p.setage(89);
-
-    cout<<"Name="<<p.getname()<<endl<<"Age="<<p.getage()<<endl; // for only show new value or update value
 }
