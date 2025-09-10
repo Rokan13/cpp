@@ -11,6 +11,8 @@ public:
      cout<<"constructing"<<'\n';
     }
     int geti(){return i;}
+
+
     ~samp(){cout<<"destrusting"<<'\n';}
 
 
