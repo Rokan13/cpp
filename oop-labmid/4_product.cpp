@@ -8,13 +8,17 @@ private:
 	double price;
 
 public:
-	Product() : product_name("Unnamed"), product_id(0), price(0.0) {
+	Product() {
+	    product_name="unknown";
+	    product_id=0;
+	    price=0;
 	}
 
-	Product(string s, int pid, double p) :
-	    product_name(s), product_id(pid), price(p) {
-	}
 
+	Product(string s, int pid, double p)
+    {
+         product_name=s; product_id=pid; price=p;
+	}
 	~Product() {
 		cout << product_name << ' ' << "destroyed." << endl;
 	}
@@ -33,11 +37,10 @@ public:
 };
 
 int main() {
-	Product p1, p2("Book", 12, 129.12);
-
+	Product p1("Book", 12, 129.12);
 	p1.display();
+
+	Product p2;
+	p2.set("Pen", 11, 10.14);
 	p2.display();
-
-	p1.set("Pen", 11, 10.14);
-	p1.display();
 }
