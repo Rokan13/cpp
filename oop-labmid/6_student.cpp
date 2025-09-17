@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-constexpr int MAX_SIZE = 10;
+constexpr int MAX_SIZE = 3;
 
 class Student {
 public:
@@ -10,9 +10,14 @@ public:
 	int    mark;
 	int    dmark;
 
-	Student(string n = "", string i = "", int m = 0, int d = 0) :
-	    name(n), id(i), mark(m), dmark(d) {
+
+
+	student(string n, string i, int m, int d)
+	{
+	    name=n; id=i ; mark=m; dmark=d;
 	}
+
+
 
 	void input() {
 		cout << "Enter student info [name id mark] ";
@@ -21,7 +26,7 @@ public:
 
 	void display() {
 		if (mark > dmark) {
-			cout << "Name: " << name << endl
+			cout << "Name: " << name << endl  // find mark greater than dmark
 			     << "ID:   " << id << endl
 			     << "Mark: " << mark << endl;
 		}
