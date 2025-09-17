@@ -7,12 +7,21 @@ private:
 	int width;
 
 public:
-	Rectangle(int l = 0, int w = 0) : length(l), width(w) {
-	}
+
+Rectangle()
+	{length=0;
+	width=0;}
+
+
 
 	void set(int l, int w) {
 		length = l;
 		width  = w;
+	}
+
+	void show()
+	{
+	    cout<<"Length: "<<length <<endl<<"WIdth:"<<width<<endl;
 	}
 
 	int calculate_area() {
@@ -30,9 +39,12 @@ public:
 };
 
 int main() {
-	Rectangle r1(2, 3), r2;
-	r2.set(5, 6);
+	Rectangle r1;
+	r1.set(2, 3);
+	/*Rectangle r2;*/
+	r1.show();
+	/*r2.set(5, 6);*/
 
 	r1.display();
-	r2.display();
+    /*r2.display();*/
 }
