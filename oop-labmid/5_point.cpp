@@ -6,10 +6,13 @@ private:
 	int x, y;
 
 public:
-	Point(int nx = 0, int ny = 0) : x(nx), y(ny) {
+	Point() {
+	    x=0; y=0;
 	}
+	Point(int m,int n){x=m; y=n;}
 
-	Point(const Point& p) : x(p.x), y(p.y) {
+	Point(const Point& p) {
+	     x=p.x;  y=p.y;   //copyconstructor
 	}
 
 	int getx() {
@@ -20,15 +23,15 @@ public:
 		return y;
 	}
 
-	void display() {
-		cout << "X = " << getx() << endl << "Y = " << gety() << endl;
-	}
+
 };
 
 int main() {
 	Point p1(10, 20);
-	p1.display();
 
-	Point p2(p1);
-	p2.display();
+		cout << "X = " << p1.getx() << endl << "Y = " << p1.gety() << endl;
+
+	Point p2(p1);  //copy
+
+		cout << "X = " << p1.getx() << endl << "Y = " << p2.gety() << endl;
 }
